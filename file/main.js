@@ -76,6 +76,8 @@ window.addEventListener("load", () => {
         const index = tasks.indexOf(taskText)
         if (index !== -1) {
           tasks[index] = task_input_element.value
+          //keep taskText in sync so the next edit can still find this task
+          taskText = task_input_element.value
           saveTasks()
         }
       }
